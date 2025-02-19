@@ -1,0 +1,47 @@
+# MusicPlugin Configuration
+
+# Default settings for music zones
+defaults:
+  radius: 30
+  volume: 100
+  fade_distance: 3
+
+# Music playlists configuration
+playlists:
+  default:
+    - "custom_sound:music_track1"
+    - "custom_sound:music_track2"
+  ambient:
+    - "custom_sound:ambient1"
+    - "custom_sound:ambient2"
+
+# Event triggers for music
+events:
+  enabled: true
+  triggers:
+    boss_spawn:
+      playlist: "boss_music"
+      radius: 40
+      volume: 100
+    night_time:
+      playlist: "ambient"
+      radius: 25
+      volume: 80
+
+# Performance settings
+performance:
+  update_interval: 20 # ticks
+  max_concurrent_zones: 10
+  cleanup_interval: 600 # ticks
+
+# Default instrument settings
+default-instrument: PIANO
+
+# Note settings
+default-octave: 1
+
+# Message settings
+messages:
+  no-permission: "&cYou don't have permission to use this command!"
+  invalid-note: "&cInvalid note! Valid notes are: A, B, C, D, E, F, G"
+  playing-note: "&aPlaying note: %note%" 

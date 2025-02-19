@@ -1,0 +1,15 @@
+name: MusicPlugin
+version: '1.0'
+main: com.devranaah.musicplugin.MusicPlugin
+api-version: '1.20'
+description: A plugin for playing musical notes
+commands:
+  music:
+    description: Play musical notes
+    usage: /<command> <note>
+    permission: musicplugin.use
+
+permissions:
+  musicplugin.use:
+    description: Allows players to use music commands
+    default: true 
